@@ -12,8 +12,8 @@ A new flutter plugin project.
   s.license          = { :file => '../LICENSE' }
   s.author           = { 'xudong.rao' => 'xudong.rao@outlook.com' }
   s.source           = { :path => '.' }
-  s.source_files = 'Classes/**/*'
-  s.public_header_files = 'Classes/**/*.h'
+  s.source_files = 'jpush_flutter/Sources/jpush_flutter/**/*.{h,m}'
+  s.public_header_files = 'jpush_flutter/Sources/jpush_flutter/include/**/*.h'
   s.dependency 'Flutter'
   s.dependency 'JCore','>= 5.2.0'
   s.dependency 'JPush','6.1.0'

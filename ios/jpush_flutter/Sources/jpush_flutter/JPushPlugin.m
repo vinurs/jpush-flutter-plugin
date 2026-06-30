@@ -3,8 +3,18 @@
 #import <UserNotifications/UserNotifications.h>
 #endif
 
+// SwiftPM 下极光 SDK 头文件通过 xcframework 模块暴露（angle-bracket）；
+// CocoaPods 下走扁平 header search path（quoted）。用 __has_include 双兼容。
+#if __has_include(<JPush/JPUSHService.h>)
+#import <JPush/JPUSHService.h>
+#else
 #import "JPUSHService.h"
+#endif
+#if __has_include(<JCore/JGInforCollectionAuth.h>)
+#import <JCore/JGInforCollectionAuth.h>
+#else
 #import "JGInforCollectionAuth.h"
+#endif
 
 #define JPLog(fmt, ...) NSLog((@"| JPUSH | Flutter | iOS | " fmt), ##__VA_ARGS__)
 

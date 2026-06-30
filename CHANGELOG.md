@@ -1,3 +1,10 @@
+## 3.4.7 (2026-06-30)
+
+iOS 端新增 Swift Package Manager (SPM) 支持，消除 Flutter「plugin does not support Swift Package Manager」警告
+- 新增 `ios/jpush_flutter/Package.swift`，依赖极光官方 SPM 包 jpush-sdk 6.1.0 / jcore-sdk 5.4.2 与 FlutterFramework
+- iOS 源码迁移到 SPM 标准布局（`ios/jpush_flutter/Sources/`），SDK 头文件 import 改用 `__has_include` 兼容 SPM 与 CocoaPods
+- 保留 podspec，CocoaPods 与 SPM 双轨共存，老用户集成方式不受影响
+
 ## 3.4.6 (2026-06-12)
 
 更新鸿蒙 JPush SDK（@jg/push）到 1.4.0
